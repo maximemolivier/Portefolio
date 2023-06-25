@@ -25,7 +25,7 @@
 
             <v-container fluid class="d-flex flex-column flex-md-row align-center">
                 <v-col cols="12" md="4">
-                    <v-card :elevation="elev" class="skills pa-2 text-center">
+                    <v-card elevation="10" class="skills pa-2 text-center">
                         <span class="text1">MES COMPÉTENCES</span>
                         <v-col v-for="(framework, index) in store.frameworks" :key="index" md="12">
                             <div @click="ChangeProjets(framework.nom)" class="skill font-weight-black">
@@ -133,7 +133,6 @@ const nom = ref('')
 const selectionProjet = ref(false)
 const projetSelec = ref([])
 
-const elev = ref(10)
 
 function ChangeProjets(n) {
     projets.value = []
